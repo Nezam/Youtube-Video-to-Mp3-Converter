@@ -23,7 +23,7 @@
 						file_put_contents('log.txt',"$content\r\n",FILE_APPEND);
 		
 						$str = exec("mp3downloadlink.py "."'".$x."' "."".$y."", $output);
-						if(array_key_exists('0', $output)){
+						if(true){
 				
 							$downloaddata = json_decode($output[0],true);
 							$durl = $downloaddata["durl"];
