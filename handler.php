@@ -4,19 +4,20 @@
 
  $error = array("responsestate"=>"ERROR","code"=>32);
  
- $data = json_decode(file_get_contents('php://input'), true);
+ $data2 = json_decode(file_get_contents('php://input'), true);
+ $data = $_GET['youtubeurl'];
  
 	if(isset($data)){
-		if(isset($data["youtubeurl"] )){
+		if(isset($data)){
 			
-			if(array_key_exists($data["appid"], $keyval)){
+			/*if(array_key_exists($data["appid"], $keyval)){
 				if($keyval[$data["appid"]] == $data["password"]){
 						$x = $data["youtubeurl"];
 						$y = "1200";
 						if($data["appid"] == "" && $data["password"] == ""){
 							$y = "20";
-						}
-
+						}*/
+                            
 						$now = new DateTime();
 						$datafor = $now->format('Y-m-d H:i:s'); 
 						$content = $datafor."      ".$x."---Time Duration :".$y;
@@ -40,9 +41,9 @@
 						}else{
 							echo json_encode(array("responsestate"=>"ERROR","code"=>34));
 						}
-					}else{
+					/*}else{
 						echo json_encode(array("responsestate"=>"ERROR","code"=>30));
-					}
+					}*/
 			}else{
 				echo json_encode(array("responsestate"=>"ERROR","code"=>30));
 			}
@@ -50,8 +51,8 @@
 		}else{
 			echo json_encode( $error);
 		}
-	}else{
+	/*}else{
 		echo json_encode( $error);
-	}
+	}*/
  
  ?>
