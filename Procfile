@@ -1,1 +1,1 @@
-web: python handler.php
+web: handler.php
