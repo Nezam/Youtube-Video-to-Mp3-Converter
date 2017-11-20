@@ -1,1 +1,1 @@
-web: php handler.php
+web: php
