@@ -6,7 +6,7 @@
  
  $data = json_decode(file_get_contents('php://input'), true);
  
-isset($data)){
+isset($data){
 		if(isset($data["appid"],$data["password"],$data["youtubeurl"] )){
 			
 			if(array_key_exists($data["appid"], $keyval)){
