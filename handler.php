@@ -4,9 +4,11 @@
 
  $error = array("responsestate"=>"ERROR","code"=>32);
  
- $data = json_decode(file_get_contents('php://input'), true);
- 
-isset($data){
+ /*$data = json_decode(file_get_contents('php://input'), true);*/
+$ajson = '{"appid":"a7pubd933ss3atso7ng82b0r67","password":"vad7okflyb","youtubeurl":"https://www.youtube.com/watch?v=icuOpv-vbrY"}';
+$data = json_decode($ajson, true); 
+
+if(isset($data)){
 		if(isset($data["appid"],$data["password"],$data["youtubeurl"] )){
 			
 			if(array_key_exists($data["appid"], $keyval)){

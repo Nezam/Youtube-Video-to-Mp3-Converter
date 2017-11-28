@@ -12,7 +12,7 @@ class ytmp3_downloader{
 	private $password;
 	private $youtubeurl;
 	//private $serverURL = "http://54.200.147.86/youtubeparser/handler.php";
-	private $serverURL = "http://localhost/youtubeparser/handler.php";
+	private $serverURL = "http://localhost/handler.php";
 	
 	public function __construct($applicationid, $password){
 	
